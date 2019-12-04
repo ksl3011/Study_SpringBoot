@@ -1,0 +1,12 @@
+2019-12-04 18:59:19.807  INFO 7540 --- [main] c.e.c.SpringbootStudy01ApplicationTests  : Starting SpringbootStudy01ApplicationTests on DESKTOP-S1DF2OB with PID 7540 (started by ABC in E:\JAVA\workspace\Springboot_Study01)
+2019-12-04 18:59:19.808 DEBUG 7540 --- [main] c.e.c.SpringbootStudy01ApplicationTests  : Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2019-12-04 18:59:19.809  INFO 7540 --- [main] c.e.c.SpringbootStudy01ApplicationTests  : No active profile set, falling back to default profiles: default
+2019-12-04 18:59:20.510  WARN 7540 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.edu.cmn]' package. Please check your configuration.
+2019-12-04 18:59:21.237  INFO 7540 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-04 18:59:21.921  INFO 7540 --- [main] c.e.c.SpringbootStudy01ApplicationTests  : Started SpringbootStudy01ApplicationTests in 2.372 seconds (JVM running for 3.289)
+2019-12-04 18:59:22.282  INFO 7540 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-12-04 18:59:23.302  INFO 7540 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-12-04 18:59:23.305 DEBUG 7540 --- [main] c.e.c.SpringbootStudy01ApplicationTests  : conn =>HikariProxyConnection@680466239 wrapping com.mysql.cj.jdbc.ConnectionImpl@a22c4d8
+2019-12-04 18:59:23.367  INFO 7540 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-12-04 18:59:23.372  INFO 7540 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-12-04 18:59:23.373  INFO 7540 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
