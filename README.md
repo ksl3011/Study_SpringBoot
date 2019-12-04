@@ -1,2 +1,2 @@
 # Study_SpringBoot
-springboot 연습
+스프링부트 공부 정리입니다.
