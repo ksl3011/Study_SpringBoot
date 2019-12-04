@@ -3,6 +3,8 @@ package com.edu.cmn;
 import static org.assertj.core.api.Assertions.assertThat;
 
 import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import javax.sql.DataSource;
@@ -26,6 +28,12 @@ class SpringbootStudy01ApplicationTests {
 			Connection conn = ds.getConnection();
 			LOG.debug("conn =>" + conn);
 			assertThat(conn).isInstanceOf(Connection.class);
+
+			/*
+			 * String sql = "SELECT * FROM PF_BOARD"; PreparedStatement ps =
+			 * conn.prepareStatement(sql); ResultSet rs = ps.executeQuery();
+			 * while(rs.next()) { System.out.println(rs.getString("TITLE")); }
+			 */
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
