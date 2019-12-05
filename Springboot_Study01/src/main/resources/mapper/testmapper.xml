@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.edu.mapper.MapperTest">
+
+  <select id="testXml" parameterType="java.lang.String" resultType="testVO">
+    SELECT COUNT(*) as a
+    		,COUNT(*) as b
+    FROM PF_BOARD
+    WHERE 1=#{testKey}
+  </select>
+  
+</mapper>

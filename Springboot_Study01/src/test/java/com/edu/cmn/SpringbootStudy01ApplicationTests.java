@@ -23,6 +23,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.MvcResult;
 
+import com.edu.mapper.MapperTest;
+
 @SpringBootTest
 class SpringbootStudy01ApplicationTests {
 	private Logger LOG = LoggerFactory.getLogger(this.getClass());
@@ -31,7 +33,19 @@ class SpringbootStudy01ApplicationTests {
 	private DataSource ds;
 	
 	@Autowired
-	private MockMvc mock;
+	private MapperTest mt;
+	
+	@Test
+	public void mapperTest2() throws Exception {
+		testVO vo = mt.testXml("1");
+		System.out.println(vo.toString());
+	}
+		
+	//@Test
+	public void mapperTest() throws Exception {
+		String result = mt.test("1");
+		System.out.println("mapperTest : " + result);
+	}
 	
 	//@Test
 	public void contextLoads() {
@@ -50,16 +64,4 @@ class SpringbootStudy01ApplicationTests {
 		}
 	}
 
-	@Test
-	public void test() throws Exception {
-		
-		
-		MvcResult result = mock.perform(get("/test1").param("msg", "testtesttest"))
-							.andExpect(status().isOk())
-							.andReturn();
-		
-		String str = result.getResponse().getContentAsString();
-		System.out.println(str);
-		
-	}
 }

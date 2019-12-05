@@ -1,0 +1,22 @@
+사용Dependency
+	MySQL
+	MyBatis
+	Web
+	DevTools
+	
+main/resources/static?
+	html, image, css등의 파일들
+
+main/resources/template?
+	thymeleaf등의 템플릿파일들
+	
+application.properties
+	spring.devtools.livereload.enabled=true?
+		리소스파일들 자동 갱신
+		
+mapper
+	mapper 인터페이스 생성
+	-> 메인App에 맵스캔 경로추가(@MapperScan(...))
+	-> mapper.xml생성(네임스페이스->인터페이스경로, id->메소드이름)
+	-> 프로퍼티에 xml경로설정 (mybatis.mapper-locations=classpath:...)
+		(classpath : 컴파일이후 실제 클래스폴더 안 경로, 확장자 지정없으면 자동 .class)
