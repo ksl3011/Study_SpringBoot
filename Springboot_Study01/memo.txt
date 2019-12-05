@@ -8,7 +8,7 @@ main/resources/static?
 	html, image, css등의 파일들
 
 main/resources/template?
-	thymeleaf등의 템플릿파일들
+	html, thymeleaf등의 템플릿파일들
 	
 application.properties
 	spring.devtools.livereload.enabled=true?
@@ -20,3 +20,9 @@ mapper
 	-> mapper.xml생성(네임스페이스->인터페이스경로, id->메소드이름)
 	-> 프로퍼티에 xml경로설정 (mybatis.mapper-locations=classpath:...)
 		(classpath : 컴파일이후 실제 클래스폴더 안 경로, 확장자 지정없으면 자동 .class)
+		
+jsp
+	jsp파일 구동위해
+	-> jstl, tomcat-embed-jasper 의존추가
+	-> 프로퍼티에 fix설정 (spring.mvc.view.prefix=/WEB-INF/...경로)
+					 (spring.mvc.view.suffix=.jsp) 
