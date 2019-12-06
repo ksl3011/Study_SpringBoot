@@ -63,7 +63,6 @@ class SpringbootStudy01ApplicationTests {
 		rs.close();
 		ps.close();
 		conn.close();
-		
 	}
 
 }
