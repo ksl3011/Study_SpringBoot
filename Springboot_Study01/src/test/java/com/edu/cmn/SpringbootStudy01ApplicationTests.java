@@ -48,20 +48,22 @@ class SpringbootStudy01ApplicationTests {
 	}
 	
 	//@Test
-	public void contextLoads() {
-		try {
-			Connection conn = ds.getConnection();
-			LOG.debug("conn =>" + conn);
-			assertThat(conn).isInstanceOf(Connection.class);
+	public void contextLoads() throws SQLException{
 
-			
-			String sql = "SELECT COUNT(*) as cnt FROM PF_BOARD"; PreparedStatement ps =
-			conn.prepareStatement(sql); ResultSet rs = ps.executeQuery();
-			while(rs.next()) { System.out.println(rs.getString("cnt")); }
-			
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
+		Connection conn = ds.getConnection();
+		LOG.debug("conn =>" + conn);
+		assertThat(conn).isInstanceOf(Connection.class);
+
+		
+		String sql = "SELECT COUNT(*) as cnt FROM PF_BOARD";
+		PreparedStatement ps = conn.prepareStatement(sql);
+		ResultSet rs = ps.executeQuery();
+		while(rs.next()) { System.out.println(rs.getString("cnt")); }
+	
+		rs.close();
+		ps.close();
+		conn.close();
+		
 	}
 
 }
