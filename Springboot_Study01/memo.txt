@@ -25,4 +25,11 @@ jsp
 	jsp파일 구동위해
 	-> jstl, tomcat-embed-jasper 의존추가
 	-> 프로퍼티에 fix설정 (spring.mvc.view.prefix=/WEB-INF/...경로)
-					 (spring.mvc.view.suffix=.jsp) 
+					 (spring.mvc.view.suffix=.jsp)
+
+webtest
+	webApplicationContext 필요
+	mockMVC 필요
+	
+file업로드
+	 다른설정없이 form-> input type file로 전달 -> MultipartFile (multiple일경우 [])
