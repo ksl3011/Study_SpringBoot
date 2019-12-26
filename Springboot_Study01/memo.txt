@@ -33,3 +33,6 @@ webtest
 	
 file업로드
 	 다른설정없이 form-> input type file로 전달 -> MultipartFile (multiple일경우 [])
+	 
+insert-> db의 자동부여값 리턴
+	<selectKey> -> 키프로퍼티 파라미터안의 값 -> 리턴시 넣은 vo에서 값 확인 
